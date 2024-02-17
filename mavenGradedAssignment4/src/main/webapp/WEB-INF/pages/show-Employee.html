@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	body{
+		background-color: aqua;
+		align-items: flex-end;
+	}
+	
+
+
+
+
+/* Apply consistent design */
+
+table {
+
+  font-family: Arial, sans-serif;
+
+  border-collapse: collapse;
+
+  width : 100%;
+
+}
+
+table th {
+
+  background-color: burlywood;
+
+  font-weight: bold;
+
+}
+
+
+
+/*------------------- Alternating Row Colors------------ */
+
+table tr:nth-child(even) {
+
+  background-color: #9df2eb;
+
+}
+
+table tr:nth-child(odd) {
+
+  background-color: rosybrown;
+
+}
+
+
+
+/* Appropriate Alignment */
+
+table td {
+
+  text-align: center; /* or left/right depending on the content */
+
+}
+
+
+
+/* Whitespace */
+
+table td, table th {
+
+  padding: 15px; /* adjust as needed */
+
+}
+
+/* Consistent Borders */
+
+table td, table th {
+
+  border: 1px solid rgb(255, 255, 128);
+
+}
+a:link {
+
+  color: green;
+
+}
+
+
+
+/* visited link */
+
+a:visited {
+
+  color: green;
+
+}
+
+
+
+/* mouse over link */
+
+a:hover {
+
+  color: red;
+
+}
+
+
+
+/* selected link */
+
+a:active {
+
+  color: mediumaquamarine;
+
+} 	
+</style>
+</head>
+<body>
+	
+		<table border="2">
+		
+		<tr>
+			  
+			<th>Employee_Name</th>
+			<th>Employee_Address</th>
+			<th>Employee_Phone</th>
+			<th>Employee_Salary</th>
+			<th>Action 1</th>
+			<th>Action 2</th>
+		</tr>
+		
+		<tr th:each="temp :${emp}">
+			 
+			<td th:text="${temp.Employee_Name}"></td>
+			<td th:text="${temp.Employee_Address}"></td>
+			<td th:text="${temp.Employee_Phone}"></td>
+			<td th:text="${temp.Employee_Salary}"></td>
+			
+			<!-- update-->
+			<td><a th:href="@{update-employee(Employee_Id=${temp.Employee_Id})}">Update</a></td>
+			
+			<!-- delete -->
+			<td ><a th:href="@{delete-employee(Employee_Id=${temp.Employee_Id})}">Delete</a></td>
+			
+		</tr>
+		
+	</table>
+	
+	<a href="insert">Add Employee</a>
+
+</body>
+</html>

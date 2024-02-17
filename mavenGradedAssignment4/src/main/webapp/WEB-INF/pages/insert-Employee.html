@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+	body{
+		background-color: aqua;
+		align-items: flex-end;
+	}
+	
+
+
+
+
+/* Apply consistent design */
+
+table {
+
+  font-family: Arial, sans-serif;
+
+  border-collapse: collapse;
+
+  width : 100%;
+
+}
+
+table th {
+
+  background-color: burlywood;
+
+  font-weight: bold;
+
+}
+
+
+
+/*------------------- Alternating Row Colors------------ */
+
+table tr:nth-child(even) {
+
+  background-color: #9df2eb;
+
+}
+
+table tr:nth-child(odd) {
+
+  background-color: rosybrown;
+
+}
+
+
+
+/* Appropriate Alignment */
+
+table td {
+
+  text-align: center; /* or left/right depending on the content */
+
+}
+
+
+
+/* Whitespace */
+
+table td, table th {
+
+  padding: 15px; /* adjust as needed */
+
+}
+
+/* Consistent Borders */
+
+table td, table th {
+
+  border: 1px solid rgb(255, 255, 128);
+
+}
+a:link {
+
+  color: green;
+
+}
+
+
+
+/* visited link */
+
+a:visited {
+
+  color: green;
+
+}
+
+
+
+/* mouse over link */
+
+a:hover {
+
+  color: red;
+
+}
+
+
+
+/* selected link */
+
+a:active {
+
+  color: mediumaquamarine;
+
+} 	
+</style>
+
+</head>
+<body>
+	
+	<form action="insert-param" method="post">
+		
+		<table border="">
+			
+		<tr>
+			
+		<td><label>Employee_Name :</label></td>
+		<td><input type="text" name="Employee_Name"></td>
+		
+		</tr>	
+		
+		<tr>
+			
+		<td><label>Employee_Address :</label></td>
+		<td><input type="text" name="Employee_Address"></td>
+	    
+		</tr>
+	    
+	    <tr>
+			
+	   <td><label>Employee_Phone :</label></td> 
+	    <td><input type="text" name="Employee_Phone"></td> 
+	    
+		</tr>
+	     
+	     <tr>
+			 
+	     <td><label>Employee_Salary :</label></td>
+	     <td><input type="text" name="Employee_Salary"></td>
+	     
+		 </tr>
+	     
+	     <tr>
+			 
+	     <td><button type="submit">Save</button></td>
+	     <td><button type="reset">ReSet...</button></td>
+		 
+		 </tr>
+			 
+		 
+	    
+			
+			
+		
+		</table>
+		
+	</form>
+
+</body>
+</html>
